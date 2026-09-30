@@ -1,0 +1,52 @@
+# ==========================================
+# Python
+# ==========================================
+
+# Python virtual environments
+.venv/
+venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+
+# ==========================================
+# VS Code
+# ==========================================
+
+.vscode/
+
+
+# ==========================================
+# Operating-system temporary files
+# ==========================================
+
+.DS_Store
+Thumbs.db
+
+
+# ==========================================
+# Temporary / backup files
+# ==========================================
+
+*~
+*.tmp
+
+
+# ==========================================
+# Experimental data
+# ==========================================
+
+# Raw datasets can become very large.
+# We will decide explicitly later which datasets
+# should be version-controlled.
+data/raw/
+
+
+# ==========================================
+# SolidWorks temporary / backup files
+# ==========================================
+
+~$*
+*.bak
