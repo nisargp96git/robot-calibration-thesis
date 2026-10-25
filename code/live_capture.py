@@ -18,6 +18,16 @@ camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 1080)
 # Defining the checkerboard pattern
 board_size = (9,6)
 
+
+#Define when the subpixel corner refinement should stop.
+
+criteria = (
+    cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER,
+    30,
+    0.001
+)
+
+
 #Saving the captured images in the correct folder
 project_root = Path(__file__).resolve().parent.parent
 Output_dir = project_root /"data/raw/camera_01/intrinsic"
@@ -54,6 +64,16 @@ try:
 
         if found:
 
+            #Improve the initial corner estimates to subpixel precison
+            corners= cv2.cornerSubPix(
+                gray,
+                corners,
+                (11, 11),
+                (-1, -1),
+                criteria
+            )
+            #Draw the refined corner locations on the preview image.
+
             cv2.drawChessboardCorners(preview, board_size, corners, found)
 
             status_text = "CHECKERBOARD DETECTED: 54/54"
@@ -80,7 +100,7 @@ try:
 
                 while image_path.exists():
                     image_number +=1
-                    image_path= Output_dir / f"image{image_number:03d}.png"
+                    image_path= Output_dir / f"image_{image_number:03d}.png"
 
                 saved = cv2.imwrite(str(image_path), frame)
 
