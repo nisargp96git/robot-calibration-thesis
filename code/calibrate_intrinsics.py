@@ -57,6 +57,9 @@ object_points = []
 #create an empty list to st0re the detected 2D image points
 image_points = []
 
+#Store the file name corresponding to each accepted image.
+accepted_image_names =[]
+
 #Processing each discovered image.
 
 for image_path in image_paths:
@@ -111,6 +114,9 @@ for image_path in image_paths:
         #store a copy of the 54 refined 2d corner coordinates
         image_points.append(corners.copy())
 
+        #Store the file name corresponding to these two point arrays.
+        accepted_image_names.append(image_path.name)
+
     else:
         print("checkerboard NOT detected.")
 #Display the number of images successfully prepared for calibration
@@ -145,3 +151,31 @@ if image_points:
     #Display the estimated lens distortion coefficients.
     print("Distortion Coefficients")
     print(dist_coeffs)
+
+    #Display a heading for the individual image errrors.
+    print("\nPer-image RMS reprojection errors.")
+
+    #process every image accepted during camera calibration.
+    for i, filename in enumerate(accepted_image_names):
+        #project the known 3D checkerboard Coordinates into the image using the calibrated instrinsics and image's baord pose
+        projected_points, _ = cv2.projectPoints(
+            object_points[i],
+            rvecs[i],
+            tvecs[i],
+            camera_matrix,
+            dist_coeffs
+            )
+        #Convert the projected coordinates to an array of shape(54, 2).
+        projected_points = projected_points.reshape(-1, 2)
+
+        #Calculate the coordinate difference for each corner.
+        differences = image_points[i] - projected_points
+
+        #Calculate the squared Euclidean distances fo rall 54 corners.
+        squared_errors = np.sum(differences ** 2, axis=1)
+
+        #Calculate the RMS reprojection error for this image.
+        image_rms = np.sqrt(np.mean(squared_errors))
+
+        #Print the filename and its RMS error to four decimal places.
+        print(f"{filename}: {image_rms:.4f} pixels")
