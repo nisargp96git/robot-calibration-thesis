@@ -1,0 +1,26 @@
+Processing session: /home/nisarg/Projects/Thesis/data/raw/camera_repeatability/run_01/near/20261105_205359
+
+STATIONARY CAMERA REPEATABILITY
+Pose: near
+Observations: 30
+
+Mean checkerboard position (mm):
+[-40.0327 -97.7852 711.3714]
+
+Position standard deviation (mm):
+X: 0.01355888415012534
+Y: 0.017023511555930824
+Z: 0.0914406920964105
+
+3D position RMS deviation (mm): 0.09241505292766568
+Maximum 3D deviation (mm): 0.19782947882285387
+
+Orientation RMS deviation (deg): 0.08518590430907942
+Maximum orientation deviation (deg): 0.14384508359765028
+
+Mean reprojection RMS (px): 0.23733879625797272
+Maximum reprojection RMS (px): 0.26736781001091003
+
+Maximum recorded joint drift (rad): 9.584426879882812e-05
+
+Saved analysis: /home/nisarg/Projects/Thesis/data/processed/camera_repeatability/run_01/near/20261105_205359/repeatability_results.json

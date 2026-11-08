@@ -5,7 +5,10 @@ import numpy as np
 
 project_root= Path(__file__).resolve().parent.parent
 
-image_dir = project_root / "data/raw/camera_01/intrinsic"
+# Define the directory containing the 26 new intrinsic calibration images.
+# This dataset was collected using the robot-mounted checkerboard.
+
+image_dir = project_root / "data/raw/camera_01/intrinsic/final_run_01"
 
 #sorted() arranges the files in filename order.
 image_paths = sorted(image_dir.glob("image_*.png"))
@@ -23,7 +26,7 @@ criteria = (
 )
 
 # Use one checkerboard square width as the coordinate
-square_size = 25.0
+square_size = 23.5
 
 #Create an empty list to store the 3D coordinates 
 board_object_points = []
@@ -179,3 +182,29 @@ if image_points:
 
         #Print the filename and its RMS error to four decimal places.
         print(f"{filename}: {image_rms:.4f} pixels")
+
+    # Define the output file for the laboratory camera's
+    # preliminary intrinsic calibration parameters.
+    calibration_file = (
+        project_root / "configs" / "lab_camera_01_intrinsics_23p5mm_preliminary.npz"
+    )
+
+    # Create the output directory if it does not already exist.
+    calibration_file.parent.mkdir(parents=True, exist_ok=True)
+
+    # Save the estimated intrinsic parameters and experiment metadata.
+    np.savez(
+        calibration_file,
+        camera_matrix=camera_matrix,
+        dist_coeffs=dist_coeffs,
+        image_size=np.array(image_size),
+        board_size=np.array(board_size),
+        square_size_mm=np.array(square_size),
+        rms_px=np.array(rms),
+        image_count=np.array(len(image_points)),
+        image_names=np.array(accepted_image_names),
+        dataset_name=np.array("final_run_01")
+    )
+
+    # Print the location of the saved calibration file.
+    print("Calibration parameters saved to:", calibration_file)

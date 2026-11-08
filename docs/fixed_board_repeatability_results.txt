@@ -1,0 +1,33 @@
+Camera calibration loaded.
+Image size: (1920, 1080)
+Checkerboard: (9, 6)
+Square size (mm): 23.5
+
+Processing near: 30 images
+Mean position XYZ (mm): [ 77.01562834 -39.94284868 691.451698  ]
+Position standard deviation XYZ (mm): [0.01986691 0.01384368 0.11149351]
+3D position RMS (mm): 0.11217503502604315
+Rotation RMS (deg): 0.03606095010310807
+Mean reprojection RMS (px): 0.2273196816444397
+
+Processing middle: 30 images
+Mean position XYZ (mm): [ 95.92709071 215.78462425 935.37028641]
+Position standard deviation XYZ (mm): [0.01949261 0.01436496 0.06850535]
+3D position RMS (mm): 0.0714375242494477
+Rotation RMS (deg): 0.06847704704700927
+Mean reprojection RMS (px): 0.1220904198785623
+
+Processing far: 30 images
+Mean position XYZ (mm): [-203.78579143  115.46512214 1329.32888117]
+Position standard deviation XYZ (mm): [0.04916759 0.02224307 0.28102803]
+3D position RMS (mm): 0.2813526728869823
+Rotation RMS (deg): 0.09840975967824239
+Mean reprojection RMS (px): 0.16141576965649923
+
+SUMMARY
+Position | 3D RMS (mm) | Rotation RMS (deg)
+near   | 0.112175 | 0.036061
+middle | 0.071438 | 0.068477
+far    | 0.281353 | 0.098410
+
+Saved results: /home/nisarg/Projects/Thesis/data/processed/fixed_board_repeatability/run_01/repeatability_results.json

@@ -1,0 +1,73 @@
+{
+  "validation_observations": 6,
+  "translation_rms_mm": 1.3429114339142936,
+  "rotation_rms_deg": 0.18599596136259763,
+  "results": [
+    {
+      "observation_id": "20261105_191616_597223",
+      "translation_error_mm": 1.9994170534902596,
+      "translation_components_mm": [
+        1.9604273828958867,
+        0.09685554615656145,
+        0.3808044555390211
+      ],
+      "rotation_error_deg": 0.02060832397448991,
+      "reprojection_rms_px": 0.3778742551803589
+    },
+    {
+      "observation_id": "20261105_191747_366733",
+      "translation_error_mm": 1.8331480443604684,
+      "translation_components_mm": [
+        1.6953899434068944,
+        0.09143906534906421,
+        0.6911755129237918
+      ],
+      "rotation_error_deg": 0.19926887676757912,
+      "reprojection_rms_px": 0.7524808645248413
+    },
+    {
+      "observation_id": "20261105_192005_295897",
+      "translation_error_mm": 1.2552851904934887,
+      "translation_components_mm": [
+        0.5874356351403378,
+        -1.103109109990271,
+        0.11751840492456722
+      ],
+      "rotation_error_deg": 0.3133341078229062,
+      "reprojection_rms_px": 0.3488388657569885
+    },
+    {
+      "observation_id": "20261105_192212_685845",
+      "translation_error_mm": 0.7785682926053953,
+      "translation_components_mm": [
+        0.7771547780689616,
+        0.022455441856777725,
+        -0.04116783096156951
+      ],
+      "rotation_error_deg": 0.15899166813283347,
+      "reprojection_rms_px": 0.4818379580974579
+    },
+    {
+      "observation_id": "20261105_192521_088447",
+      "translation_error_mm": 0.9246891387150484,
+      "translation_components_mm": [
+        -0.5235502478641365,
+        -0.25225838202396744,
+        0.7192432480862294
+      ],
+      "rotation_error_deg": 0.12219362751859877,
+      "reprojection_rms_px": 0.17840342223644257
+    },
+    {
+      "observation_id": "20261105_192711_924485",
+      "translation_error_mm": 0.6522322521279144,
+      "translation_components_mm": [
+        0.50777540171282,
+        0.22170671719402435,
+        0.34411797930692956
+      ],
+      "rotation_error_deg": 0.17042975481687345,
+      "reprojection_rms_px": 0.2701866924762726
+    }
+  ]
+}

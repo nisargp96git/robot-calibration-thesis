@@ -1,0 +1,18 @@
+Held-out validation observations: 6
+20261105_191616_597223: translation = 1.9994 mm, rotation = 0.0206 deg
+20261105_191747_366733: translation = 1.8331 mm, rotation = 0.1993 deg
+20261105_192005_295897: translation = 1.2553 mm, rotation = 0.3133 deg
+20261105_192212_685845: translation = 0.7786 mm, rotation = 0.1590 deg
+20261105_192521_088447: translation = 0.9247 mm, rotation = 0.1222 deg
+20261105_192711_924485: translation = 0.6522 mm, rotation = 0.1704 deg
+
+VALIDATION SUMMARY
+Observations: 6
+Translation RMS (mm): 1.3429114339142936
+Translation median (mm): 1.0899871646042687
+Translation maximum (mm): 1.9994170534902596
+Rotation RMS (deg): 0.18599596136259763
+Rotation median (deg): 0.16471071147485344
+Rotation maximum (deg): 0.3133341078229062
+
+Saved validation: /home/nisarg/Projects/Thesis/data/processed/eye_to_hand/run_01/eye_to_hand_validation.json

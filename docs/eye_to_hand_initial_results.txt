@@ -1,0 +1,24 @@
+Calibration observations: 23
+Validation observations: 6
+Excluded repeated observation: 20261105_185716_004807
+
+CAMERA TO ROBOT BASE: ^B T_C
+[[    0.024628    -0.242146     0.969927 -1185.253984]
+ [   -0.999684    -0.010904     0.022662   -48.420287]
+ [    0.005088    -0.970178    -0.242338   635.593338]
+ [    0.           0.           0.           1.      ]]
+
+CHECKERBOARD TO FLANGE: ^F T_P
+[[ -0.999869  -0.01559   -0.004281 103.562294]
+ [ -0.015567   0.999865  -0.005276 -57.083057]
+ [  0.004362  -0.005209  -0.999977  26.025941]
+ [  0.         0.         0.         1.      ]]
+
+TRAINING CONSISTENCY
+Translation RMS (mm): 1.6227985703228232
+Translation maximum (mm): 3.1487142448426804
+Rotation RMS (deg): 0.1816122473475431
+Rotation maximum (deg): 0.41903692810834975
+
+Saved calibration: /home/nisarg/Projects/Thesis/data/processed/eye_to_hand/run_01/eye_to_hand_initial.npz
+Validation observations were not used for fitting.

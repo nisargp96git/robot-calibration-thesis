@@ -1,0 +1,29 @@
+INDIVIDUAL VALIDATION RESIDUALS
+Observation | X (mm) | Y (mm) | Z (mm) | 3D (mm)
+20261105_191616_597223 | +1.9604 | +0.0969 | +0.3808 | 1.9994
+20261105_191747_366733 | +1.6954 | +0.0914 | +0.6912 | 1.8331
+20261105_192005_295897 | +0.5874 | -1.1031 | +0.1175 | 1.2553
+20261105_192212_685845 | +0.7772 | +0.0225 | -0.0412 | 0.7786
+20261105_192521_088447 | -0.5236 | -0.2523 | +0.7192 | 0.9247
+20261105_192711_924485 | +0.5078 | +0.2217 | +0.3441 | 0.6522
+
+AXIS-BY-AXIS SUMMARY
+
+X axis:
+  Mean signed residual (mm): +0.834105
+  RMS residual (mm): 1.168946
+  Standard deviation (mm): 0.897131
+
+Y axis:
+  Mean signed residual (mm): -0.153818
+  RMS residual (mm): 0.473970
+  Standard deviation (mm): 0.491106
+
+Z axis:
+  Mean signed residual (mm): +0.368615
+  RMS residual (mm): 0.460791
+  Standard deviation (mm): 0.302888
+
+OVERALL VALIDATION
+3D translation RMS (mm): 1.342911
+Matches Step 91: True

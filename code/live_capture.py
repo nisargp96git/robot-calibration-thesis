@@ -2,7 +2,9 @@ import cv2
 import time
 from pathlib import Path
 
-camera = cv2.VideoCapture(4, cv2.CAP_V4L2)
+#v4l2-ctl --list-devices
+
+camera = cv2.VideoCapture(2, cv2.CAP_V4L2)
 
 if not camera.isOpened():
     raise RuntimeError("Error: Could not open the webcam.")
@@ -29,8 +31,17 @@ criteria = (
 
 
 #Saving the captured images in the correct folder
+#Preserving the previous seven calibration images.
 project_root = Path(__file__).resolve().parent.parent
-Output_dir = project_root /"data/raw/camera_01/intrinsic"
+
+#for camera 1 lab main folder for calibration
+Output_dir = project_root /"data/raw/camera_01/intrinsic/final_run_01"
+
+#for camera 1 lab validation folder, not for intrinsics
+#Output_dir = project_root / "data/raw/camera_01/intrinsic/validation_run_01"
+
+
+
 
 Output_dir.mkdir(parents=True, exist_ok=True)
 

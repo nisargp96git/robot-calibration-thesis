@@ -1,0 +1,17 @@
+Validation images found: 9
+Calibration RMS: 0.2857434562306169 pixels
+Square size: 23.5 mm
+image_001.png: 0.1942 pixels
+image_002.png: 0.4033 pixels
+image_003.png: 0.3985 pixels
+image_004.png: 0.3336 pixels
+image_005.png: 0.2709 pixels
+image_006.png: 0.3487 pixels
+image_007.png: 0.2181 pixels
+image_008.png: 0.2575 pixels
+image_009.png: 0.1998 pixels
+
+Validation images accepted: 9
+Total corner observations: 486
+Calibration RMS: 0.2857434562306169 pixels
+Validation RMS: 0.30168915 pixels
